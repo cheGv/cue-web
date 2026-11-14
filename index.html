@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="/">
+
+  <meta charset="UTF-8">
+
+  <!-- Path URLs. Runs before Flutter starts:
+       1. web/404.html sends a path GitHub Pages has no file for (a reload of
+          /clients/x) here as /?p=<path>; this puts the path back.
+       2. Links from the hash-URL era (/#/clients/x) become /clients/x.
+       Supabase auth fragments (#access_token=…) are left alone. -->
+  <script>
+    (function () {
+      var l = window.location;
+      try {
+        var p = l.pathname === '/' ? new URLSearchParams(l.search).get('p') : null;
+        if (p !== null) {
+          // Same-site paths only: '/x', never '//host' or '/\host'.
+          window.history.replaceState(null, '', /^\/(?![\/\\])/.test(p) ? p : '/');
+        } else if (l.hash.indexOf('#/') === 0) {
+          var path = l.hash.slice(1);
+          if (l.search) path += (path.indexOf('?') < 0 ? '?' : '&') + l.search.slice(1);
+          window.history.replaceState(null, '', path);
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="Cue">
+
+  <!-- Fonts are bundled with the app (DM Sans + Noto fallbacks); nothing is
+       fetched from Google at runtime. See pubspec.yaml. -->
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Cue">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon and app icons: the spine's cuttlefish mark
+       (assets/brand/cuttlefish_mark.svg), rendered at each size. -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>Cue</title>
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <!--
+    You can customize the "flutter_bootstrap.js" script.
+    This is useful to provide a custom configuration to the Flutter loader
+    or to give the user feedback during the initialization process.
+
+    For more details:
+    * https://docs.flutter.dev/platform-integration/web/initialization
+  -->
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>

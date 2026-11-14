@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-30 -28 60 70" width="28" height="33">
+  <g fill="none" stroke="#D97706" stroke-width="1.6" stroke-linecap="round">
+    <path transform="translate(-5 14) rotate(0.6)" d="M0 0 Q-0.5 5.5 -1 11"/>
+    <path transform="translate(-2 14) rotate(0.6)" d="M0 0 Q-0.5 5.0 -1 10"/>
+    <path transform="translate(2 14) rotate(0.6)" d="M0 0 Q0.5 5.0 1 10"/>
+    <path transform="translate(5 14) rotate(0.6)" d="M0 0 Q0.5 5.5 1 11"/>
+    <path transform="translate(-3 14) rotate(0.6)" d="M0 0 Q-0.5 8.0 -1 16"/>
+    <path transform="translate(3 14) rotate(0.6)" d="M0 0 Q0.5 8.0 1 16"/>
+  </g>
+  <path d="M0 -20 C-8 -20 -13 -14 -13 -6 C-13 4 -11 10 -8 13 L-5 14 L5 14 L8 13 C11 10 13 4 13 -6 C13 -14 8 -20 0 -20 Z" fill="#F59E0B" stroke="#D97706" stroke-width="0.8"/>
+  <path d="M-13 -8 Q-24 -3 -23 5 Q-23 9 -19 10 Q-14 8 -13 4 Z" fill="#F59E0B" stroke="#D97706" stroke-width="0.8"/>
+  <path d="M-13 -8 Q-22 -4 -22 4 Q-22 8 -19 9 Q-15 8 -13 4 Z" transform="scale(-1 1)" fill="#F59E0B" stroke="#D97706" stroke-width="0.8"/>
+  <g fill="none" stroke="#1A1308" stroke-width="1" stroke-linecap="round">
+    <path d="M-6 -8 Q-5 -7 -4 -8 Q-3 -7 -2 -8"/>
+    <path d="M2 -8 Q3 -7 4 -8 Q5 -7 6 -8"/>
+  </g>
+</svg>
