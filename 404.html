@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Cue</title>
+  <!-- GitHub Pages serves this page for any path it has no file for: a reload
+       of /clients/x, or a link to it. It sends the path to the app root as
+       /?p=<path>, and web/index.html puts the path back before Flutter starts,
+       so the app opens where the link pointed. The root never redirects, so a
+       broken deploy can't loop. -->
+  <script>
+    (function () {
+      var l = window.location;
+      if (l.pathname === '/' || l.pathname === '/index.html') return;
+      l.replace(l.origin + '/?p=' + encodeURIComponent(l.pathname + l.search + l.hash));
+    })();
+  </script>
+</head>
+<body></body>
+</html>
